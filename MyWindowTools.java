@@ -1,22 +1,13 @@
+package ui;
+
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.TitledBorder;
+import javax.swing.border.*;
 import java.awt.*;
 
-public final class MyWindowTools {
-    public static final Font CONSOLAS_16;
-    public static final Font ARIAL_UNICODE_18;
-    public static final Font ARIAL_UNICODE_14;
-
-    static {
-        CONSOLAS_16 = new Font("Consolas", Font.PLAIN, 16);
-        ARIAL_UNICODE_18 = new Font("Arial Unicode MS", Font.PLAIN, 18);
-        ARIAL_UNICODE_14 = new Font("Arial Unicode MS", Font.PLAIN, 14);
-    }
-
+public class MyWindowTools {
     public static Border createMyBorder(String title) {
         Border baseBorder = BorderFactory.createLineBorder(new Color(184, 207, 229));
-        return BorderFactory.createTitledBorder(baseBorder, title, TitledBorder.LEFT, TitledBorder.TOP, CONSOLAS_16);
+        return BorderFactory.createTitledBorder(baseBorder, title, TitledBorder.LEFT, TitledBorder.TOP, MyFonts.CONSOLAS_16);
     }
 
     public static JPanel getBorderSpacedPanel(JComponent component) {
@@ -41,6 +32,18 @@ public final class MyWindowTools {
             text = text.substring(0, text.length() - 1);
             label.setText(text + "...");
         }
+    }
+}
+
+class MyFonts {
+    public static final Font CONSOLAS_16;
+    public static final Font ARIAL_UNICODE_18;
+    public static final Font ARIAL_UNICODE_14;
+
+    static {
+        CONSOLAS_16 = new Font("Consolas", Font.PLAIN, 16);
+        ARIAL_UNICODE_18 = new Font("Arial Unicode MS", Font.PLAIN, 18);
+        ARIAL_UNICODE_14 = new Font("Arial Unicode MS", Font.PLAIN, 14);
     }
 }
 
