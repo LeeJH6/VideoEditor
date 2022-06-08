@@ -1,1 +1,1 @@
-# VideoEditor
+# Video Information Editor
